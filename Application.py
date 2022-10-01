@@ -25,7 +25,7 @@ if choice == "Definition" :
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+    driver = Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url = "https://www.dictionary.com/")
     search_box = WebDriverWait(driver = driver , timeout=10).until(method = EC.element_to_be_clickable(mark = (By.XPATH , '//*[@id="global-search"]')))
     time.sleep(0.5)
@@ -54,7 +54,7 @@ elif choice == "Translation" :
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+    driver = Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url = "https://translate.google.com/")
     
     st.header("Select languages")
