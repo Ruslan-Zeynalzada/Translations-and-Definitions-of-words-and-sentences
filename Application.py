@@ -20,7 +20,7 @@ if choice == "Definition" :
     st.header("Which word's definition would you like to know")
     user_input = st.text_input(label = "Enter your word please.")
     
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -49,7 +49,7 @@ if choice == "Definition" :
             pass
         
 elif choice == "Translation" : 
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
