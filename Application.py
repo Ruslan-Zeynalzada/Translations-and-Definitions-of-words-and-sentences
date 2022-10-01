@@ -43,9 +43,9 @@ if choice == "Definition" :
         try :
             st.header("The Definitions")
             time.sleep(0.5)
-            st.markdown(f"* The First Definition is : **{first_def[0].text}**")
-            st.markdown(f"* The Second Definition is : **{first_def[1].text}**")
-            st.markdown(f"* The Third Definition is : **{first_def[2].text}**")
+            st.markdown(f"* The First Definition is : {first_def[0].text}")
+            st.markdown(f"* The Second Definition is : {first_def[1].text}")
+            st.markdown(f"* The Third Definition is : {first_def[2].text}")
         except IndexError : 
             pass
         
@@ -62,7 +62,7 @@ elif choice == "Translation" :
     from_lang_ex = st.selectbox("Translate from" , options = ["English" , "Azerbaijan" , "Russian"])
     to_lang_ex = st.selectbox("Translate to" , options = ["Azerbaijan" , "English" , "Russian"])
     
-    user_input_2 = st.text_input(label = "Enter you word or sentence please.")
+    user_input_2 = st.text_input(label = "Enter your word or sentence please.")
     
     sign = WebDriverWait(driver=driver , timeout=10).until(method = EC.element_to_be_clickable(mark = (By.CSS_SELECTOR , "div[class = 'VfPpkd-Bz112c-RLmnJb']"))).click()
     from_lang = driver.find_element(by = By.TAG_NAME , value = "input")
