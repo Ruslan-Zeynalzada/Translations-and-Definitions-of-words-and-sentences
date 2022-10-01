@@ -4,4 +4,5 @@ Guidelines
 * If You want to translate words or sentences click Translation
 
 * If you want to get the defination of words click Definition
+
 Application : https://translation-definition-app.herokuapp.com/
